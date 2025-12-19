@@ -1,10 +1,10 @@
-# 🔐 SISS (Secure IPFS Split-Key Storage)
+# SISS (Secure IPFS Split-Key Storage)
 
 **Stockage décentralisé sécurisé par séparation de clés.**
 
 SISS permet d'uploader des fichiers chiffrés sur IPFS tout en gardant le contrôle total de l'accès via une clé secrète locale.
 
-## ⚡ Installation
+## Installation
 
 ```bash
 # Installe IPFS automatiquement (sans sudo, sans API key)
@@ -13,9 +13,9 @@ SISS permet d'uploader des fichiers chiffrés sur IPFS tout en gardant le contr�
 
 Le script installe IPFS dans `~/.local/bin/` et démarre automatiquement le daemon.
 
-## 🚀 Utilisation
+## Utilisation
 
-### 📤 Upload
+### Upload
 
 ```bash
 ./siss-ipfs.sh upload <fichier> <nom-du-projet>
@@ -28,7 +28,7 @@ Exemple :
 
 **Résultat** : Crée `uploads/audit-2025/` avec `manifest.json` (public) et `secret.key` (privé).
 
-### 📥 Read
+### Read
 
 ```bash
 ./siss-ipfs.sh read <nom-du-projet>
@@ -36,7 +36,7 @@ Exemple :
 
 Récupère le fichier depuis IPFS, vérifie la signature, déchiffre et enregistre dans `outputs/`.
 
-### 📋 List
+### List
 
 ```bash
 ./siss-ipfs.sh list
@@ -44,7 +44,7 @@ Récupère le fichier depuis IPFS, vérifie la signature, déchiffre et enregist
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
 **Séparation stricte (Split-Key)** :
 
@@ -62,7 +62,7 @@ graph LR
     Key --> Private[⚠️ SECRET]
 ```
 
-## 📂 Structure
+## Structure
 
 ```
 SISS/
@@ -75,7 +75,7 @@ SISS/
 └── outputs/            # Fichiers déchiffrés
 ```
 
-## 🔧 Prérequis
+## Prérequis
 
 - Linux / macOS
 - `openssl` (généralement pré-installé)
